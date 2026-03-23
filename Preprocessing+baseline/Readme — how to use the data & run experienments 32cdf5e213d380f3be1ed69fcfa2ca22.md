@@ -1,0 +1,7 @@
+# Readme — how to use the data & run experienments
+
+The raw PubMedQA dataset was retrieved from GitHub and subjected to stratified sampling in strict accordance with the official `split_dataset.py` script. The dataset has been scientifically partitioned into an independent **Test Set and a subset designated for 10-fold Cross-Validation** (CV). 
+
+Consequently, ten directories—`pqal_fold0` through `pqal_fold9`—have been generated within the `data/` directory, each containing its respective training set (`train_set.json`) and development/validation set (`dev_set.json`).
+
+Regarding experimental execution, a baseline system utilizing TF-IDF for text representation and Logistic Regression for prediction has been established and successfully validated using the `fold0` dataset. To ensure development efficiency and rigorous variable control, all subsequent enhancement experiments—including model tuning across different design axes—**will initially be verified using `fold0`**. Once the optimal model architecture and hyperparameters are determined, the experiment will be extended to full 10-fold cross-validation. The stability and consistency of the models will be evaluated by calculating average performance metrics, and final performance reporting will be based on the results from the independent test set.
