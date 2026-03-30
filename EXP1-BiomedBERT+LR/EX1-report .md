@@ -24,7 +24,7 @@ Table 1: 10-Fold Cross-Validation Results
 | Model | Combination | Accuracy | Macro-F1 | F1 no | F1 yes | F1 maybe |
 | --- | --- | --- | --- | --- | --- | --- |
 | TF-IDF + LR (Baseline) | n/a | 0.5600 | 0.3439 | 0.3413 | 0.6904 | 0.0000 |
-| BiomedBERT + LR | concat | 0.5280 | 0.4228 | 0.4725 | 0.6398 | 0.1561 |
+| BiomedBERT + LR | concat | 0.5280 | 0.4195 | 0.4613 | 0.6418 | 0.1554 |
 | BiomedBERT + LR | diff | 0.5320 | 0.4379 | 0.4624 | 0.6369 | 0.2143 |
 | BiomedBERT + LR | prod | 0.4960 | 0.3831 | 0.3933 | 0.6229 | 0.1329 |
 | BiomedBERT + LR | concat-diff | 0.5280 | 0.4228 | 0.4725 | 0.6398 | 0.1561 |
