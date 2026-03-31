@@ -1,14 +1,14 @@
 # EX1-report
 
-# 4. Experimental Evaluation
+# Experimental Evaluation
 
-### 4.1 Performance Metrics and Their Limitations
+### 1.1 Performance Metrics and Their Limitations
 
 We evaluate all models using two metrics: accuracy and macro-averaged F1 score. Accuracy measures the proportion of correctly classified instances across all three labels. However, the PubMedQA expert-labelled dataset has a heavily skewed class distribution (yes: 55.2%, no: 33.8%, maybe: 11.0%), which makes accuracy misleading on its own. A classifier that always predicts "yes" achieves 55.2% accuracy while doing no useful work. We therefore treat macro-F1 as our primary metric, as it averages F1 equally across all three classes regardless of frequency, and penalises models that fail to recognise the minority maybe class. Per-class F1 scores for no, yes and maybe are also reported to reveal class-specific failure modes.
 
 A limitation of accuracy is that it can increase simply by becoming more confident on the majority class, hiding deterioration on maybe. A limitation of macro-F1 is that it treats failure on maybe (11% of data) as equally important as failure on yes (55%), which may not reflect real clinical priorities. For the purpose of evaluating whether models can genuinely distinguish all three answer categories, macro-F1 is the more appropriate choice.
 
-### 4.2 Experimental Setup
+### 1.2 Experimental Setup
 
 All experiments use the expert-labelled subset of PubMedQA (PQA-L), which contains 1,000 instances. We follow the standard evaluation protocol: 10-fold cross-validation on a fixed 500-instance split, with the remaining 500 instances reserved as a held-out test set. 
 
@@ -17,7 +17,7 @@ To save time, we calculated all the BiomedBERT embeddings for the folds at once 
 
 All the experiments were completed on a NVIDIA T4 GPU. The encoding for 10 folds took approximately 130 seconds in total. The training time for each fold of logistic regression was less than 0.5 seconds.
 
-### 4.3 Results
+### 1.3 Results
 
 Table 1: 10-Fold Cross-Validation Results
 
@@ -47,7 +47,7 @@ Table 2: Parameter Sensitivity Analysis (best combination mode per configuration
 | 6 | CTX-LIMIT=5 | diff | 0.5440 | 0.4325 |
 | 7 | CTX-LIMIT=None | concat-diff | 0.5380 | 0.4332 |
 
-### 4.4 Error Analysis
+### 1.4 Error Analysis
 
 Table 3 presents the comprehensive confusion matrix obtained by using the best model for all 10 folds.
 
@@ -65,7 +65,7 @@ Second, maybe is still mostly misclassified. Of 55 actual maybe instances across
 
 Third, the no class has the lowest recall (78 out of 169, recall = 0.46). No answers often contain positive-sounding language such as “there was no significant difference”, which embeddings may not reliably separate from affirmative findings.
 
-### 4.5 Discussion
+### 1.5 Discussion
 
 Replacing TF-IDF features with BiomedBERT embeddings gives a clear gain in balanced performance (macro-F1: 0.344 to 0.438), mainly by enabling the model to identify some maybe instances and improve no class recognition. The diff combination being the most effective supports the idea that the semantic distance between question and context is a useful signal for this task.
 
