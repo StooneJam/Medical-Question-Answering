@@ -6,12 +6,16 @@ class LLMUtils:
         self.model_name = model_name
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-
     # Method to build prompt from the data
     def build_prompt(self, question, context):
         if isinstance(context, list):
             context = " ".join(context)
-        return f"Question: {question}\nContext: {context}\nAnswer:"
+        return (
+            f"Question: {question}\n"
+            f"Context: {context}\n"
+            f"Answer with one word: yes, no, or maybe.\n"
+            f"Answer:"
+        )
 
     # Method to tokenize the data for BioGpt LLM
     def tokenize_data(self, row):
