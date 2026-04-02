@@ -49,6 +49,6 @@ class LLMUtils:
             return "yes"
         if "no" in text:
             return "no"
-        if "maybe" in text:
+        if "maybe" or "may" in text:
             return "maybe"
         return text
