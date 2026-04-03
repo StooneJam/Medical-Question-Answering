@@ -21,9 +21,21 @@ In Experiment 1, the frozen BiomedBERT model was used to encode the question and
 
 Before training, all features are standardised. We then apply a logistic regression classifier with the same settings as the baseline.
 
-We tested seven parameter configurations in total, varying the following factors: token length allocation (MAX-Q, MAX-C), pooling method, regularisation strength C, and context length limit (CTX-LIMIT). The best-performing configuration is reported as the main result.
+We tested seven parameter configurations in total, varying the following factors: token length allocation (MAX-Q, MAX-C), pooling method, regularisation strength C, and context length limit (CTX-LIMIT). The best-performing parameter configuration is reported as the main result and summarised in Table 1.
 
 All experiments were completed on a NVIDIA T4 GPU. Encoding all 10 folds took approximately 130 seconds in total, and training logistic regression on each fold took less than 0.5 seconds.
+
+Table 1: Best Parameter Configuration
+
+| Parameter | Value | Description |
+| --- | --- | --- |
+| MAX-Q | 128 | Maximum token length for the question input |
+| MAX-C | 384 | Maximum token length for the context input |
+| POOLING | mean | Average all token outputs to form the sentence embedding |
+| CTX-LIMIT | 3 | Number of context paragraphs retained before tokenisation |
+| C | 10.0 | Inverse regularisation strength for logistic regression |
+| CLASS-WEIGHT | balanced | Adjusts class weights inversely proportional to frequency |
+| BATCH-SIZE | 16 | Number of samples per encoding batch |
 
 ### 1.3 Results
 
