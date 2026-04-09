@@ -1,2 +1,4 @@
 runs/
 .ipynb_checkpoints/
+artifacts/
+__pycache__/
