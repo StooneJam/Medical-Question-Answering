@@ -39,7 +39,7 @@ Table 1: Best Parameter Configuration
 
 ### 1.3 Results
 
-Table 1: 10-Fold Cross-Validation Results
+Table 2: 10-Fold Cross-Validation Results
 
 | Model | Combination | Accuracy | Macro-F1 | F1 no | F1 yes | F1 maybe |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -51,7 +51,7 @@ Table 1: 10-Fold Cross-Validation Results
 
 The best result was achieved using the diff combination method, with a macro-F1 score of 0.4379, which is 24.1% higher than the baseline (0.353). Both accuracy and macro-F1 improved over the baseline, with accuracy rising from 0.516 to 0.532. 
 
-Table 2 presents the parameter sensitivity analysis. The diff combination achieved the best or near-best macro-F1 in five of the seven configurations.
+The diff combination achieved the best or near-best macro-F1 in five of the seven configurations.
 
 - Config 2 (MAX-Q=64, MAX-C=448)
 
@@ -77,7 +77,7 @@ Limits the context to the first five paragraphs, which retains most of the usefu
 
 Imposes no paragraph limit, relying solely on the 384-token truncation. Performance (macro-F1: 0.4332) is comparable to Config 6, suggesting that most informative content falls within the token budget anyway.
 
-Table 2: Parameter Sensitivity Analysis (best combination mode per configuration)
+Table 3: Parameter Sensitivity Analysis (best combination mode per configuration)
 
 | Config | Key change | Best mode | Accuracy | Macro-F1 |
 | --- | --- | --- | --- | --- |
@@ -93,9 +93,9 @@ Table 2: Parameter Sensitivity Analysis (best combination mode per configuration
 
 The PubMedQA expert-labelled dataset has a heavily skewed class distribution (yes: 55.2%, no: 33.8%, maybe: 11.0%). This imbalance means that models are incentivised to favour the majority class, and the small number of maybe instances means that even a few misclassifications dramatically reduce per-class recall.
 
-Table 3 presents the comprehensive confusion matrix obtained by using the best model for all 10 folds.
+Table 4 presents the comprehensive confusion matrix obtained by using the best model for all 10 folds.
 
-Table 3:  Confusion Matrix
+Table 4:  Confusion Matrix
 
 |  | Pred no | Pred yes | Pred maybe |
 | --- | --- | --- | --- |
