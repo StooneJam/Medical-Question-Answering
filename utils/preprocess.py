@@ -1,6 +1,6 @@
 import json
 import pandas as pd
-
+from sklearn.utils import resample
 
 def load_and_preprocess(file_path, label_encoding = True):
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -20,3 +20,25 @@ def load_and_preprocess(file_path, label_encoding = True):
         })
     return pd.DataFrame(rows)
 
+def upsample_no_and_maybe(df):
+    df['label'] = df['label'].str.lower().str.strip()
+    yes_df = df[df['label'] == "yes"]
+    no_df = df[df['label'] == "no"]
+    maybe_df = df[df['label'] == "maybe"]
+
+    no_upsampled = resample(
+        no_df,
+        replace= True,
+        n_samples= len(yes_df),
+        random_state= 28
+    )
+
+    maybe_upsampled = resample(
+        maybe_df,
+        replace= True,
+        n_samples= len(yes_df),
+        random_state= 28
+    )
+
+    upsampled_df = pd.concat([yes_df, no_upsampled, maybe_upsampled]).sample(frac=1, random_state= 28)
+    return upsampled_df

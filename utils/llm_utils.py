@@ -14,6 +14,8 @@ class LLMUtils:
             f"Question: {question}\n"
             f"Context: {context}\n"
             f"Answer with one word: yes, no, or maybe.\n"
+            # f"If the evidence is weak or contradictory, answer: maybe.\n"
+            # f"If the evidence does not support the effect, answer: no.\n"
             f"Answer:"
         )
 
@@ -49,6 +51,6 @@ class LLMUtils:
             return "yes"
         if "no" in text:
             return "no"
-        if "maybe" in text:
+        if "maybe" or "may" in text:
             return "maybe"
         return text
