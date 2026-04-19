@@ -1,0 +1,766 @@
+{
+  "winner": {
+    "pipeline_name": "simple_supervised",
+    "fold_results": [
+      {
+        "run_name": "simple_fold_1",
+        "fold_id": 1,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_1/checkpoint-100",
+        "temperature": 1.4437026977539062,
+        "selection_metrics": {
+          "accuracy": 0.82,
+          "macro_f1": 0.7514830848164182,
+          "f1_no": 0.8571428571428571,
+          "f1_maybe": 0.5454545454545454,
+          "f1_yes": 0.8518518518518519
+        },
+        "final_metrics": {
+          "accuracy": 0.76,
+          "macro_f1": 0.6876152170269817,
+          "f1_no": 0.7777777777777778,
+          "f1_maybe": 0.46153846153846156,
+          "f1_yes": 0.8235294117647058
+        }
+      },
+      {
+        "run_name": "simple_fold_2",
+        "fold_id": 2,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_2/checkpoint-100",
+        "temperature": 1.611506700515747,
+        "selection_metrics": {
+          "accuracy": 0.74,
+          "macro_f1": 0.5912574016022293,
+          "f1_no": 0.7586206896551724,
+          "f1_maybe": 0.18181818181818182,
+          "f1_yes": 0.8333333333333334
+        },
+        "final_metrics": {
+          "accuracy": 0.76,
+          "macro_f1": 0.573025856044724,
+          "f1_no": 0.8888888888888888,
+          "f1_maybe": 0.0,
+          "f1_yes": 0.8301886792452831
+        }
+      },
+      {
+        "run_name": "simple_fold_3",
+        "fold_id": 3,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_3/checkpoint-175",
+        "temperature": 2.0095181465148926,
+        "selection_metrics": {
+          "accuracy": 0.72,
+          "macro_f1": 0.5829135718147928,
+          "f1_no": 0.7647058823529411,
+          "f1_maybe": 0.15384615384615385,
+          "f1_yes": 0.8301886792452831
+        },
+        "final_metrics": {
+          "accuracy": 0.68,
+          "macro_f1": 0.5465099530435283,
+          "f1_no": 0.6896551724137931,
+          "f1_maybe": 0.14285714285714285,
+          "f1_yes": 0.8070175438596491
+        }
+      },
+      {
+        "run_name": "simple_fold_4",
+        "fold_id": 4,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_4/checkpoint-50",
+        "temperature": 0.7603294849395752,
+        "selection_metrics": {
+          "accuracy": 0.72,
+          "macro_f1": 0.5904872070285604,
+          "f1_no": 0.8421052631578947,
+          "f1_maybe": 0.15384615384615385,
+          "f1_yes": 0.7755102040816326
+        },
+        "final_metrics": {
+          "accuracy": 0.66,
+          "macro_f1": 0.5339411059750043,
+          "f1_no": 0.6060606060606061,
+          "f1_maybe": 0.25,
+          "f1_yes": 0.7457627118644068
+        }
+      },
+      {
+        "run_name": "simple_fold_5",
+        "fold_id": 5,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_5/checkpoint-25",
+        "temperature": 0.9224795699119568,
+        "selection_metrics": {
+          "accuracy": 0.8,
+          "macro_f1": 0.7397147147147147,
+          "f1_no": 0.8108108108108109,
+          "f1_maybe": 0.5333333333333333,
+          "f1_yes": 0.875
+        },
+        "final_metrics": {
+          "accuracy": 0.66,
+          "macro_f1": 0.4864766081871345,
+          "f1_no": 0.6875,
+          "f1_maybe": 0.0,
+          "f1_yes": 0.7719298245614035
+        }
+      },
+      {
+        "run_name": "simple_fold_6",
+        "fold_id": 6,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_6/checkpoint-25",
+        "temperature": 0.6502535939216614,
+        "selection_metrics": {
+          "accuracy": 0.68,
+          "macro_f1": 0.5528735632183908,
+          "f1_no": 0.7333333333333333,
+          "f1_maybe": 0.16666666666666666,
+          "f1_yes": 0.7586206896551724
+        },
+        "final_metrics": {
+          "accuracy": 0.64,
+          "macro_f1": 0.5623456790123457,
+          "f1_no": 0.7333333333333333,
+          "f1_maybe": 0.25,
+          "f1_yes": 0.7037037037037037
+        }
+      },
+      {
+        "run_name": "simple_fold_7",
+        "fold_id": 7,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_7/checkpoint-100",
+        "temperature": 1.164174199104309,
+        "selection_metrics": {
+          "accuracy": 0.78,
+          "macro_f1": 0.688035602633418,
+          "f1_no": 0.7894736842105263,
+          "f1_maybe": 0.4444444444444444,
+          "f1_yes": 0.8301886792452831
+        },
+        "final_metrics": {
+          "accuracy": 0.76,
+          "macro_f1": 0.6852954144620811,
+          "f1_no": 0.8125,
+          "f1_maybe": 0.42857142857142855,
+          "f1_yes": 0.8148148148148148
+        }
+      },
+      {
+        "run_name": "simple_fold_8",
+        "fold_id": 8,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_8/checkpoint-100",
+        "temperature": 1.5679843425750732,
+        "selection_metrics": {
+          "accuracy": 0.74,
+          "macro_f1": 0.5965948796137476,
+          "f1_no": 0.7777777777777778,
+          "f1_maybe": 0.18181818181818182,
+          "f1_yes": 0.8301886792452831
+        },
+        "final_metrics": {
+          "accuracy": 0.74,
+          "macro_f1": 0.5985838779956426,
+          "f1_no": 0.75,
+          "f1_maybe": 0.2222222222222222,
+          "f1_yes": 0.8235294117647058
+        }
+      },
+      {
+        "run_name": "simple_fold_9",
+        "fold_id": 9,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_9/checkpoint-75",
+        "temperature": 1.189414620399475,
+        "selection_metrics": {
+          "accuracy": 0.74,
+          "macro_f1": 0.6836007130124777,
+          "f1_no": 0.7272727272727273,
+          "f1_maybe": 0.5,
+          "f1_yes": 0.8235294117647058
+        },
+        "final_metrics": {
+          "accuracy": 0.72,
+          "macro_f1": 0.5793650793650794,
+          "f1_no": 0.75,
+          "f1_maybe": 0.16666666666666666,
+          "f1_yes": 0.8214285714285714
+        }
+      },
+      {
+        "run_name": "simple_fold_10",
+        "fold_id": 10,
+        "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_10/checkpoint-100",
+        "temperature": 1.669540524482727,
+        "selection_metrics": {
+          "accuracy": 0.7,
+          "macro_f1": 0.49583333333333335,
+          "f1_no": 0.6875,
+          "f1_maybe": 0.0,
+          "f1_yes": 0.8
+        },
+        "final_metrics": {
+          "accuracy": 0.7,
+          "macro_f1": 0.5023112480739599,
+          "f1_no": 0.7272727272727273,
+          "f1_maybe": 0.0,
+          "f1_yes": 0.7796610169491526
+        }
+      }
+    ],
+    "mean_outer_metrics": {
+      "accuracy": 0.708,
+      "f1_maybe": 0.1921855921855922,
+      "f1_no": 0.7422988505747127,
+      "f1_yes": 0.7921565689956396,
+      "macro_f1": 0.5755470039186481
+    },
+    "std_outer_metrics": {
+      "accuracy": 0.044,
+      "f1_maybe": 0.1580844266593785,
+      "f1_no": 0.07241236456421124,
+      "f1_yes": 0.039430452837916484,
+      "macro_f1": 0.06418809612106835
+    },
+    "best_fold": {
+      "run_name": "simple_fold_1",
+      "fold_id": 1,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_1/checkpoint-100",
+      "temperature": 1.4437026977539062,
+      "selection_metrics": {
+        "accuracy": 0.82,
+        "macro_f1": 0.7514830848164182,
+        "f1_no": 0.8571428571428571,
+        "f1_maybe": 0.5454545454545454,
+        "f1_yes": 0.8518518518518519
+      },
+      "final_metrics": {
+        "accuracy": 0.76,
+        "macro_f1": 0.6876152170269817,
+        "f1_no": 0.7777777777777778,
+        "f1_maybe": 0.46153846153846156,
+        "f1_yes": 0.8235294117647058
+      }
+    }
+  },
+  "loser": {
+    "pipeline_name": "advanced_ssl",
+    "fold_results": [
+      {
+        "run_name": "advanced_fold_1",
+        "fold_id": 1,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_1_teacher_a/checkpoint-100",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_1_teacher_b/checkpoint-100",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_1_student/checkpoint-180",
+        "teacher_a_temperature": 1.1048598289489746,
+        "teacher_b_temperature": 1.1030317544937134,
+        "student_temperature": 1.2924559116363525,
+        "pseudo_count": 1028,
+        "class_targets": {
+          "0": 338,
+          "1": 138,
+          "2": 552
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 8672,
+            "selected": 338,
+            "target": 338,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 160,
+            "selected": 138,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 17988,
+            "selected": 552,
+            "target": 552,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.72,
+          "macro_f1": 0.580952380952381,
+          "f1_no": 0.7428571428571429,
+          "f1_maybe": 0.2,
+          "f1_yes": 0.8
+        }
+      },
+      {
+        "run_name": "advanced_fold_2",
+        "fold_id": 2,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_2_teacher_a/checkpoint-125",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_2_teacher_b/checkpoint-75",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_2_student/checkpoint-180",
+        "teacher_a_temperature": 1.8643113374710083,
+        "teacher_b_temperature": 1.4887290000915527,
+        "student_temperature": 1.579277753829956,
+        "pseudo_count": 1028,
+        "class_targets": {
+          "0": 338,
+          "1": 138,
+          "2": 552
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 4023,
+            "selected": 338,
+            "target": 338,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 1005,
+            "selected": 138,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 16319,
+            "selected": 552,
+            "target": 552,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.8,
+          "macro_f1": 0.6851398601398602,
+          "f1_no": 0.875,
+          "f1_maybe": 0.3076923076923077,
+          "f1_yes": 0.8727272727272727
+        }
+      },
+      {
+        "run_name": "advanced_fold_3",
+        "fold_id": 3,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_3_teacher_a/checkpoint-125",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_3_teacher_b/checkpoint-100",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_3_student/checkpoint-63",
+        "teacher_a_temperature": 1.9484959840774536,
+        "teacher_b_temperature": 1.7842698097229004,
+        "student_temperature": 1.7360455989837646,
+        "pseudo_count": 604,
+        "class_targets": {
+          "0": 338,
+          "1": 138,
+          "2": 552
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 0,
+            "selected": 0,
+            "target": 338,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 52,
+            "selected": 52,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 10269,
+            "selected": 552,
+            "target": 552,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.76,
+          "macro_f1": 0.5213675213675214,
+          "f1_no": 0.7333333333333333,
+          "f1_maybe": 0.0,
+          "f1_yes": 0.8307692307692308
+        }
+      },
+      {
+        "run_name": "advanced_fold_4",
+        "fold_id": 4,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_4_teacher_a/checkpoint-50",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_4_teacher_b/checkpoint-75",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_4_student/checkpoint-90",
+        "teacher_a_temperature": 1.1105668544769287,
+        "teacher_b_temperature": 1.086356520652771,
+        "student_temperature": 1.4672602415084839,
+        "pseudo_count": 1028,
+        "class_targets": {
+          "0": 338,
+          "1": 138,
+          "2": 552
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 12158,
+            "selected": 338,
+            "target": 338,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 2796,
+            "selected": 138,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 12073,
+            "selected": 552,
+            "target": 552,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.66,
+          "macro_f1": 0.5274624469670909,
+          "f1_no": 0.5882352941176471,
+          "f1_maybe": 0.2222222222222222,
+          "f1_yes": 0.7719298245614035
+        }
+      },
+      {
+        "run_name": "advanced_fold_5",
+        "fold_id": 5,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_5_teacher_a/checkpoint-25",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_5_teacher_b/checkpoint-100",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_5_student/checkpoint-85",
+        "teacher_a_temperature": 0.7053134441375732,
+        "teacher_b_temperature": 1.513148307800293,
+        "student_temperature": 1.5195071697235107,
+        "pseudo_count": 952,
+        "class_targets": {
+          "0": 338,
+          "1": 138,
+          "2": 552
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 6055,
+            "selected": 338,
+            "target": 338,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 62,
+            "selected": 62,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 8518,
+            "selected": 552,
+            "target": 552,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.66,
+          "macro_f1": 0.4723502304147466,
+          "f1_no": 0.6428571428571429,
+          "f1_maybe": 0.0,
+          "f1_yes": 0.7741935483870968
+        }
+      },
+      {
+        "run_name": "advanced_fold_6",
+        "fold_id": 6,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_6_teacher_a/checkpoint-50",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_6_teacher_b/checkpoint-200",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_6_student/checkpoint-88",
+        "teacher_a_temperature": 1.3977288007736206,
+        "teacher_b_temperature": 2.5416271686553955,
+        "student_temperature": 1.9271695613861084,
+        "pseudo_count": 996,
+        "class_targets": {
+          "0": 338,
+          "1": 138,
+          "2": 552
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 673,
+            "selected": 338,
+            "target": 338,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 106,
+            "selected": 106,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 11871,
+            "selected": 552,
+            "target": 552,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.7,
+          "macro_f1": 0.4845173041894353,
+          "f1_no": 0.6666666666666666,
+          "f1_maybe": 0.0,
+          "f1_yes": 0.7868852459016393
+        }
+      },
+      {
+        "run_name": "advanced_fold_7",
+        "fold_id": 7,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_7_teacher_a/checkpoint-125",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_7_teacher_b/checkpoint-100",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_7_student/checkpoint-270",
+        "teacher_a_temperature": 1.195085048675537,
+        "teacher_b_temperature": 1.2153958082199097,
+        "student_temperature": 1.1704767942428589,
+        "pseudo_count": 1028,
+        "class_targets": {
+          "0": 338,
+          "1": 138,
+          "2": 552
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 10296,
+            "selected": 338,
+            "target": 338,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 143,
+            "selected": 138,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 22258,
+            "selected": 552,
+            "target": 552,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.78,
+          "macro_f1": 0.6629745733194009,
+          "f1_no": 0.7586206896551724,
+          "f1_maybe": 0.36363636363636365,
+          "f1_yes": 0.8666666666666667
+        }
+      },
+      {
+        "run_name": "advanced_fold_8",
+        "fold_id": 8,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_8_teacher_a/checkpoint-50",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_8_teacher_b/checkpoint-75",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_8_student/checkpoint-450",
+        "teacher_a_temperature": 1.3417425155639648,
+        "teacher_b_temperature": 1.7218739986419678,
+        "student_temperature": 1.5067659616470337,
+        "pseudo_count": 1028,
+        "class_targets": {
+          "0": 338,
+          "1": 138,
+          "2": 552
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 4847,
+            "selected": 338,
+            "target": 338,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 1401,
+            "selected": 138,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 10568,
+            "selected": 552,
+            "target": 552,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.72,
+          "macro_f1": 0.5886736808544556,
+          "f1_no": 0.7317073170731707,
+          "f1_maybe": 0.25,
+          "f1_yes": 0.7843137254901961
+        }
+      },
+      {
+        "run_name": "advanced_fold_9",
+        "fold_id": 9,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_9_teacher_a/checkpoint-175",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_9_teacher_b/checkpoint-125",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_9_student/checkpoint-90",
+        "teacher_a_temperature": 1.910509467124939,
+        "teacher_b_temperature": 1.8536652326583862,
+        "student_temperature": 1.5798022747039795,
+        "pseudo_count": 1028,
+        "class_targets": {
+          "0": 338,
+          "1": 138,
+          "2": 552
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 6377,
+            "selected": 338,
+            "target": 338,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 673,
+            "selected": 138,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 22652,
+            "selected": 552,
+            "target": 552,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.78,
+          "macro_f1": 0.5540229885057472,
+          "f1_no": 0.8,
+          "f1_maybe": 0.0,
+          "f1_yes": 0.8620689655172413
+        }
+      },
+      {
+        "run_name": "advanced_fold_10",
+        "fold_id": 10,
+        "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_10_teacher_a/checkpoint-25",
+        "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_10_teacher_b/checkpoint-50",
+        "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_10_student/checkpoint-71",
+        "teacher_a_temperature": 1.010182499885559,
+        "teacher_b_temperature": 1.382509469985962,
+        "student_temperature": 1.3035715818405151,
+        "pseudo_count": 723,
+        "class_targets": {
+          "0": 340,
+          "1": 138,
+          "2": 550
+        },
+        "selection_stats": {
+          "no": {
+            "available_candidates": 35,
+            "selected": 35,
+            "target": 340,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          },
+          "maybe": {
+            "available_candidates": 216,
+            "selected": 138,
+            "target": 138,
+            "min_confidence": 0.62,
+            "min_margin": 0.05
+          },
+          "yes": {
+            "available_candidates": 2698,
+            "selected": 550,
+            "target": 550,
+            "min_confidence": 0.78,
+            "min_margin": 0.12
+          }
+        },
+        "final_metrics": {
+          "accuracy": 0.76,
+          "macro_f1": 0.5358503063421096,
+          "f1_no": 0.7878787878787878,
+          "f1_maybe": 0.0,
+          "f1_yes": 0.819672131147541
+        }
+      }
+    ],
+    "mean_outer_metrics": {
+      "accuracy": 0.734,
+      "f1_maybe": 0.13435508935508936,
+      "f1_no": 0.7327156374439063,
+      "f1_yes": 0.8169226611168288,
+      "macro_f1": 0.561331129305275
+    },
+    "std_outer_metrics": {
+      "accuracy": 0.047370877129308056,
+      "f1_maybe": 0.14081043173889415,
+      "f1_no": 0.07867776290450684,
+      "f1_yes": 0.03732049639741957,
+      "macro_f1": 0.06637576601681416
+    },
+    "best_fold": {
+      "run_name": "advanced_fold_2",
+      "fold_id": 2,
+      "teacher_a_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_2_teacher_a/checkpoint-125",
+      "teacher_b_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_2_teacher_b/checkpoint-75",
+      "student_checkpoint": "./stage2_cv_results_final/runs/advanced_fold_2_student/checkpoint-180",
+      "teacher_a_temperature": 1.8643113374710083,
+      "teacher_b_temperature": 1.4887290000915527,
+      "student_temperature": 1.579277753829956,
+      "pseudo_count": 1028,
+      "class_targets": {
+        "0": 338,
+        "1": 138,
+        "2": 552
+      },
+      "selection_stats": {
+        "no": {
+          "available_candidates": 4023,
+          "selected": 338,
+          "target": 338,
+          "min_confidence": 0.78,
+          "min_margin": 0.12
+        },
+        "maybe": {
+          "available_candidates": 1005,
+          "selected": 138,
+          "target": 138,
+          "min_confidence": 0.62,
+          "min_margin": 0.05
+        },
+        "yes": {
+          "available_candidates": 16319,
+          "selected": 552,
+          "target": 552,
+          "min_confidence": 0.78,
+          "min_margin": 0.12
+        }
+      },
+      "final_metrics": {
+        "accuracy": 0.8,
+        "macro_f1": 0.6851398601398602,
+        "f1_no": 0.875,
+        "f1_maybe": 0.3076923076923077,
+        "f1_yes": 0.8727272727272727
+      }
+    }
+  }
+}

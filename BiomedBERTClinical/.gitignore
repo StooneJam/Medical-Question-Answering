@@ -2,3 +2,5 @@ runs/
 .ipynb_checkpoints/
 artifacts/
 __pycache__/
+stage2_cv_results_final/runs/
+final_adapter_biomedr18b

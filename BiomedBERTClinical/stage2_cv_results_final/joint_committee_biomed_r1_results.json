@@ -1,0 +1,1064 @@
+{
+  "reasoning_base_model_id": "zou-lab/BioMed-R1-8B",
+  "reasoning_adapter_path": "./final_adapter_biomedr18b",
+  "winning_test_result_path": "./stage2_cv_results_final/winning_test_result.json",
+  "official_dev_path": "./stage2_cv_results/fixed_splits/dev_500.json",
+  "official_test_path": "./stage2_cv_results/fixed_splits/test_500.json",
+  "few_shot_plan": {
+    "0": 1,
+    "1": 1,
+    "2": 1
+  },
+  "max_escalation_fraction": 0.2,
+  "escalated_count": 100,
+  "baseline_metrics": {
+    "accuracy": 0.702,
+    "macro_f1": 0.5649369941825886,
+    "f1_no": 0.7217125382262997,
+    "f1_maybe": 0.17094017094017094,
+    "f1_yes": 0.802158273381295,
+    "confusion_matrix": [
+      [
+        118,
+        23,
+        28
+      ],
+      [
+        16,
+        10,
+        29
+      ],
+      [
+        24,
+        29,
+        223
+      ]
+    ]
+  },
+  "joint_metrics": {
+    "accuracy": 0.71,
+    "macro_f1": 0.5638127094933377,
+    "f1_no": 0.7174603174603175,
+    "f1_maybe": 0.16071428571428573,
+    "f1_yes": 0.8132635253054101,
+    "confusion_matrix": [
+      [
+        113,
+        26,
+        30
+      ],
+      [
+        12,
+        9,
+        34
+      ],
+      [
+        21,
+        22,
+        233
+      ]
+    ]
+  },
+  "reasoning_rows": [
+    {
+      "row_id": 14,
+      "base_pred": "maybe",
+      "base_confidence": 0.3496468663215637,
+      "base_margin": 0.00959119200706482,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 224,
+      "base_pred": "maybe",
+      "base_confidence": 0.37260133028030396,
+      "base_margin": 0.008527815341949463,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 13,
+      "base_pred": "maybe",
+      "base_confidence": 0.38468092679977417,
+      "base_margin": 0.0011276602745056152,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 401,
+      "base_pred": "yes",
+      "base_confidence": 0.38683193922042847,
+      "base_margin": 0.01812833547592163,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 67,
+      "base_pred": "maybe",
+      "base_confidence": 0.37170010805130005,
+      "base_margin": 0.03701511025428772,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 29,
+      "base_pred": "no",
+      "base_confidence": 0.36510443687438965,
+      "base_margin": 0.044940173625946045,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 291,
+      "base_pred": "yes",
+      "base_confidence": 0.4174880385398865,
+      "base_margin": 0.003940671682357788,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 83,
+      "base_pred": "maybe",
+      "base_confidence": 0.40262073278427124,
+      "base_margin": 0.022771447896957397,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 192,
+      "base_pred": "yes",
+      "base_confidence": 0.3772473931312561,
+      "base_margin": 0.04879724979400635,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 487,
+      "base_pred": "yes",
+      "base_confidence": 0.42536354064941406,
+      "base_margin": 0.0031791627407073975,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 134,
+      "base_pred": "maybe",
+      "base_confidence": 0.42669087648391724,
+      "base_margin": 0.007448166608810425,
+      "reasoning_output": "answer: no",
+      "used_fallback": false,
+      "final_label": "no",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 300,
+      "base_pred": "yes",
+      "base_confidence": 0.4382360875606537,
+      "base_margin": 0.0043070316314697266,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 220,
+      "base_pred": "no",
+      "base_confidence": 0.38065505027770996,
+      "base_margin": 0.062139540910720825,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 153,
+      "base_pred": "maybe",
+      "base_confidence": 0.3991122245788574,
+      "base_margin": 0.044602036476135254,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 258,
+      "base_pred": "maybe",
+      "base_confidence": 0.425800621509552,
+      "base_margin": 0.018651694059371948,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 55,
+      "base_pred": "yes",
+      "base_confidence": 0.4468986988067627,
+      "base_margin": 0.01025480031967163,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 307,
+      "base_pred": "maybe",
+      "base_confidence": 0.45600229501724243,
+      "base_margin": 0.0027313232421875,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 105,
+      "base_pred": "maybe",
+      "base_confidence": 0.4109504222869873,
+      "base_margin": 0.05254322290420532,
+      "reasoning_output": "Final Answer: Yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 100,
+      "base_pred": "maybe",
+      "base_confidence": 0.425163209438324,
+      "base_margin": 0.0405503511428833,
+      "reasoning_output": "Based ONLY on the evidence in the following block of text:\nThe objective of this study was to determine whether the implementation of the Partogram (PEP) in the antenatal care of pregnant women in the district of Mwanza, Tanzania, would lead to a reduction in the number of referrals to the hospital. The study was carried out in the district of Mwanza, Tanzania, in 1988. The study population consisted of 303 pregnant women who were referred to the hospital for delivery. The data were collected by scoring of the obstetric files after the patient had delivered. The data were also collected at the third MO",
+      "used_fallback": true,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 284,
+      "base_pred": "maybe",
+      "base_confidence": 0.40399518609046936,
+      "base_margin": 0.06486168503761292,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 295,
+      "base_pred": "maybe",
+      "base_confidence": 0.4680350720882416,
+      "base_margin": 0.0009517967700958252,
+      "reasoning_output": "based ONLY on the evidence in the following block of text:\nIs the processing of affective prosody influenced by spatial attention?\nT h e   p r e s e n t   s t u d y   a s k e d   w h e t h e r   t h e   p r o c e s s i n g   o f   a f f e c t i v e   p r o s o d y   i s   m o d u l a t e d   b y   s p a t i a l   a t t e n t i o n.",
+      "used_fallback": true,
+      "final_label": "maybe",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 211,
+      "base_pred": "no",
+      "base_confidence": 0.39033418893814087,
+      "base_margin": 0.082190603017807,
+      "reasoning_output": "## Thinking\n\nOkay, let's tackle this question step by step. The question is asking whether lipids, blood pressure, diabetes, and smoking confer equal risk of myocardial infarction in women as in men. The evidence in the abstract seems to suggest that they do, but I need to make sure that's accurate based only on the evidence in the abstract alone.\n\nFirst, I need to read through the evidence carefully. The abstract is talking about a study that looked at risk factors for coronary events in men and women. They used data from the Reykjavik Study, which is a prospective, population-based cohort study. The",
+      "used_fallback": true,
+      "final_label": "no",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 402,
+      "base_pred": "no",
+      "base_confidence": 0.4293822646141052,
+      "base_margin": 0.04762423038482666,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 342,
+      "base_pred": "yes",
+      "base_confidence": 0.4636572301387787,
+      "base_margin": 0.021823883056640625,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 263,
+      "base_pred": "maybe",
+      "base_confidence": 0.41251158714294434,
+      "base_margin": 0.07342743873596191,
+      "reasoning_output": "Based ONLY on the evidence in the context, answer this question:\nLiving in an urban environment and non-communicable disease risk in Thailand: Does timing matter?\n\nInstructions:\n- Think through the evidence step by step.\n- Your final answer MUST be exactly one of: yes, no, or maybe.\n- End your response with exactly one of these three lines:\n  Final Answer: yes\n  Final Answer: no\n  Final Answer: maybe\n\nFinal Answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 440,
+      "base_pred": "maybe",
+      "base_confidence": 0.4420689642429352,
+      "base_margin": 0.047750383615493774,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 434,
+      "base_pred": "maybe",
+      "base_confidence": 0.4001447558403015,
+      "base_margin": 0.09283557534217834,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 302,
+      "base_pred": "maybe",
+      "base_confidence": 0.4425530433654785,
+      "base_margin": 0.052714645862579346,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 468,
+      "base_pred": "maybe",
+      "base_confidence": 0.4145881235599518,
+      "base_margin": 0.08277106285095215,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 110,
+      "base_pred": "maybe",
+      "base_confidence": 0.4530186653137207,
+      "base_margin": 0.04679599404335022,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 385,
+      "base_pred": "maybe",
+      "base_confidence": 0.42411279678344727,
+      "base_margin": 0.08379501104354858,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 318,
+      "base_pred": "no",
+      "base_confidence": 0.4381585121154785,
+      "base_margin": 0.07113465666770935,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 287,
+      "base_pred": "maybe",
+      "base_confidence": 0.4150049090385437,
+      "base_margin": 0.09517472982406616,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 234,
+      "base_pred": "maybe",
+      "base_confidence": 0.45646482706069946,
+      "base_margin": 0.05499431490898132,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 472,
+      "base_pred": "yes",
+      "base_confidence": 0.4679177701473236,
+      "base_margin": 0.04544451832771301,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 19,
+      "base_pred": "yes",
+      "base_confidence": 0.4680898189544678,
+      "base_margin": 0.045433223247528076,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 59,
+      "base_pred": "yes",
+      "base_confidence": 0.47305697202682495,
+      "base_margin": 0.043442726135253906,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 233,
+      "base_pred": "yes",
+      "base_confidence": 0.4832490384578705,
+      "base_margin": 0.043058425188064575,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 245,
+      "base_pred": "yes",
+      "base_confidence": 0.4161625802516937,
+      "base_margin": 0.11233213543891907,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 374,
+      "base_pred": "maybe",
+      "base_confidence": 0.4263862669467926,
+      "base_margin": 0.10288605093955994,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 151,
+      "base_pred": "yes",
+      "base_confidence": 0.4171265959739685,
+      "base_margin": 0.11262896656990051,
+      "reasoning_output": "Final Answer: No\n\nInstructions:\n- Think through the evidence step by step.\n- Your final answer MUST be exactly one of: Yes, No, or Maybe.\n- End your response with exactly one of these three lines:\n  Final Answer: Yes\n  Final Answer: No\n  Final Answer: Maybe\n\nFinal Answer: No",
+      "used_fallback": false,
+      "final_label": "no",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 10,
+      "base_pred": "maybe",
+      "base_confidence": 0.4573367238044739,
+      "base_margin": 0.07927244901657104,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 178,
+      "base_pred": "no",
+      "base_confidence": 0.4426829218864441,
+      "base_margin": 0.10034462809562683,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 106,
+      "base_pred": "no",
+      "base_confidence": 0.41883960366249084,
+      "base_margin": 0.12658867239952087,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 485,
+      "base_pred": "yes",
+      "base_confidence": 0.49903789162635803,
+      "base_margin": 0.057036399841308594,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 221,
+      "base_pred": "yes",
+      "base_confidence": 0.48950356245040894,
+      "base_margin": 0.06727713346481323,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 351,
+      "base_pred": "yes",
+      "base_confidence": 0.48171934485435486,
+      "base_margin": 0.07814478874206543,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 40,
+      "base_pred": "no",
+      "base_confidence": 0.4339179992675781,
+      "base_margin": 0.12966391444206238,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 486,
+      "base_pred": "maybe",
+      "base_confidence": 0.44541096687316895,
+      "base_margin": 0.1265363097190857,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 417,
+      "base_pred": "maybe",
+      "base_confidence": 0.4817412495613098,
+      "base_margin": 0.0929880440235138,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 439,
+      "base_pred": "yes",
+      "base_confidence": 0.5031315684318542,
+      "base_margin": 0.07326221466064453,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 377,
+      "base_pred": "no",
+      "base_confidence": 0.4811202585697174,
+      "base_margin": 0.09562930464744568,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 285,
+      "base_pred": "yes",
+      "base_confidence": 0.48352760076522827,
+      "base_margin": 0.09482932090759277,
+      "reasoning_output": "Based ONLY on the evidence in the following block of text:\nT h i s   s t u d y   a i m s   t o   e v a l u a t e   l o c a l   f a i l u r e   p a t t e r n s   i n   n o d e   n e g a t i v e   b r e a s t   c a n c e r   p a t i e n t s   t r e a t e d   w i t h   p o s t - m a s t e c t",
+      "used_fallback": true,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 315,
+      "base_pred": "maybe",
+      "base_confidence": 0.47056469321250916,
+      "base_margin": 0.11288216710090637,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 319,
+      "base_pred": "maybe",
+      "base_confidence": 0.48198819160461426,
+      "base_margin": 0.11082121729850769,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 50,
+      "base_pred": "maybe",
+      "base_confidence": 0.5051287412643433,
+      "base_margin": 0.08803656697273254,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 448,
+      "base_pred": "no",
+      "base_confidence": 0.4786743223667145,
+      "base_margin": 0.11722540855407715,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 376,
+      "base_pred": "yes",
+      "base_confidence": 0.49002933502197266,
+      "base_margin": 0.11235803365707397,
+      "reasoning_output": "Based ONLY on the evidence in the context, answer this question:\nRisky sexual behavior among college students With ADHD: is the mother-child relationship protective?\n\nInstructions:\n- Think through the evidence step by step.\n- Your final answer MUST be exactly one of: yes, no, or maybe.\n- End your response with exactly one of these three lines:\n  Final Answer: yes\n  Final Answer: no\n  Final Answer: maybe\n\nFinal Answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 418,
+      "base_pred": "yes",
+      "base_confidence": 0.44599372148513794,
+      "base_margin": 0.15676617622375488,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 51,
+      "base_pred": "no",
+      "base_confidence": 0.4785880446434021,
+      "base_margin": 0.1254587471485138,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 58,
+      "base_pred": "no",
+      "base_confidence": 0.4744548797607422,
+      "base_margin": 0.13446789979934692,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 299,
+      "base_pred": "yes",
+      "base_confidence": 0.4910638928413391,
+      "base_margin": 0.11937287449836731,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 423,
+      "base_pred": "maybe",
+      "base_confidence": 0.45197534561157227,
+      "base_margin": 0.16011127829551697,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 91,
+      "base_pred": "yes",
+      "base_confidence": 0.4948471486568451,
+      "base_margin": 0.11880341172218323,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 479,
+      "base_pred": "maybe",
+      "base_confidence": 0.5012580156326294,
+      "base_margin": 0.11630582809448242,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 371,
+      "base_pred": "maybe",
+      "base_confidence": 0.46372851729393005,
+      "base_margin": 0.15826281905174255,
+      "reasoning_output": "answer: no",
+      "used_fallback": false,
+      "final_label": "no",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 326,
+      "base_pred": "yes",
+      "base_confidence": 0.5198120474815369,
+      "base_margin": 0.10275501012802124,
+      "reasoning_output": "Based ONLY on the evidence in the evidence-based medicine comment above, answer this question:\nDoes covering the resection margin after distal pancreatectomy reduce postoperative complications?\n\nInstructions:\n- Think through the evidence step by step.\n- Your final answer MUST be exactly one of: yes, no, or maybe.\n- End your response with exactly one of these three lines:\n  Final Answer: yes\n  Final Answer: no\n  Final Answer: maybe\n\nFinal Answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 147,
+      "base_pred": "no",
+      "base_confidence": 0.4593629837036133,
+      "base_margin": 0.16391780972480774,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 259,
+      "base_pred": "yes",
+      "base_confidence": 0.5094043612480164,
+      "base_margin": 0.11473867297172546,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 457,
+      "base_pred": "yes",
+      "base_confidence": 0.5154191851615906,
+      "base_margin": 0.11510026454925537,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 30,
+      "base_pred": "maybe",
+      "base_confidence": 0.49726396799087524,
+      "base_margin": 0.13326069712638855,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 421,
+      "base_pred": "maybe",
+      "base_confidence": 0.49681591987609863,
+      "base_margin": 0.14057916402816772,
+      "reasoning_output": "Based ONLY on the evidence in the context, answer this question:\nShould chest wall irradiation be included after mastectomy and negative node breast cancer?\n\nInstructions:\n- Think through the evidence step by step.\n- Your final answer MUST be exactly one of: yes, no, or maybe.\n- End your response with exactly one of these three lines:\n  Final Answer: yes\n  Final Answer: no\n  Final Answer: maybe\n\nFinal Answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 414,
+      "base_pred": "yes",
+      "base_confidence": 0.5231584310531616,
+      "base_margin": 0.11895152926445007,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 397,
+      "base_pred": "no",
+      "base_confidence": 0.4814310669898987,
+      "base_margin": 0.16285920143127441,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 108,
+      "base_pred": "maybe",
+      "base_confidence": 0.509584367275238,
+      "base_margin": 0.13656747341156006,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 159,
+      "base_pred": "yes",
+      "base_confidence": 0.48274555802345276,
+      "base_margin": 0.1657770276069641,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 420,
+      "base_pred": "maybe",
+      "base_confidence": 0.5201605558395386,
+      "base_margin": 0.12969523668289185,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 338,
+      "base_pred": "maybe",
+      "base_confidence": 0.46057024598121643,
+      "base_margin": 0.18960106372833252,
+      "reasoning_output": "## Thinking\n\nOkay, let's tackle this question step by step. The question is asking whether normothermic normokalemic simultaneous antegrade/retrograde perfusion improves myocardial oxygenation and energy metabolism for hypertrophied hearts. The evidence in the abstract seems to suggest that it does, but I need to make sure based only on the evidence in the abstract alone.\n\nFirst, I need to recall what normothermic normokalemic simultaneous antegrade/retrograde perfusion (NNSP) entails. From what I remember, this is a technique used during heart surgery to protect the heart from damage during",
+      "used_fallback": true,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 201,
+      "base_pred": "yes",
+      "base_confidence": 0.46973156929016113,
+      "base_margin": 0.18120792508125305,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 405,
+      "base_pred": "maybe",
+      "base_confidence": 0.4641227722167969,
+      "base_margin": 0.19473475217819214,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 392,
+      "base_pred": "yes",
+      "base_confidence": 0.507867157459259,
+      "base_margin": 0.1510406732559204,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 164,
+      "base_pred": "maybe",
+      "base_confidence": 0.5132891535758972,
+      "base_margin": 0.1512652039527893,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "maybe"
+    },
+    {
+      "row_id": 78,
+      "base_pred": "yes",
+      "base_confidence": 0.532291829586029,
+      "base_margin": 0.13698041439056396,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 449,
+      "base_pred": "maybe",
+      "base_confidence": 0.4922622740268707,
+      "base_margin": 0.17719265818595886,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 179,
+      "base_pred": "maybe",
+      "base_confidence": 0.5203834772109985,
+      "base_margin": 0.15863341093063354,
+      "reasoning_output": "based ONLY on the evidence in the following block of text:\nDo nontriploid partial hydatidiform moles exist?\nT o   s t u d y   w h e t h e r   n o n t r i p l o i d   p a r t i a l   h y d a t i d i f o r m   m o l e s   t r u l y   e x i s t.   W e   c o n d u c t e d   a   r e e v a l u a t i o n   o f   p a t",
+      "used_fallback": true,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 181,
+      "base_pred": "no",
+      "base_confidence": 0.4941001832485199,
+      "base_margin": 0.18536442518234253,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 56,
+      "base_pred": "yes",
+      "base_confidence": 0.4941098093986511,
+      "base_margin": 0.18848368525505066,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 44,
+      "base_pred": "yes",
+      "base_confidence": 0.5351737141609192,
+      "base_margin": 0.14896118640899658,
+      "reasoning_output": "Based ONLY on the evidence in the abstract above, answer this question:\nIs there a role for radiation therapy in the treatment of unresectable non-small cell lung cancer?\n\nInstructions:\n- Think through the evidence step by step.\n- Your final answer MUST be exactly one of: yes, no, or maybe.\n- End your response with exactly one of these three lines:\n  Final Answer: yes\n  Final Answer: no\n  Final Answer: maybe\n\nFinal Answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 196,
+      "base_pred": "yes",
+      "base_confidence": 0.5362790822982788,
+      "base_margin": 0.14917096495628357,
+      "reasoning_output": "Based ONLY on the evidence in the following evidence-based medicine comment:\nA comparison of pediatric and adult bag-valve-mask ventilation in emergency medical services: are pediatric patients receiving adequate tidal volumes?\n\nInstructions:\nThink through the evidence step by step and end your response with exactly one of these three lines:\nFinal Answer: Yes\nFinal Answer: No\nFinal Answer: Maybe\n\nFinal Answer: Yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 431,
+      "base_pred": "maybe",
+      "base_confidence": 0.4911896288394928,
+      "base_margin": 0.1959468424320221,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 498,
+      "base_pred": "maybe",
+      "base_confidence": 0.4932197630405426,
+      "base_margin": 0.19638168811798096,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 246,
+      "base_pred": "maybe",
+      "base_confidence": 0.5044335722923279,
+      "base_margin": 0.18553686141967773,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 331,
+      "base_pred": "maybe",
+      "base_confidence": 0.5169914960861206,
+      "base_margin": 0.17395377159118652,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 286,
+      "base_pred": "yes",
+      "base_confidence": 0.5320798754692078,
+      "base_margin": 0.16711553931236267,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 79,
+      "base_pred": "maybe",
+      "base_confidence": 0.5032243132591248,
+      "base_margin": 0.2017664909362793,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 200,
+      "base_pred": "yes",
+      "base_confidence": 0.5230038166046143,
+      "base_margin": 0.18852290511131287,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    },
+    {
+      "row_id": 173,
+      "base_pred": "maybe",
+      "base_confidence": 0.5244380235671997,
+      "base_margin": 0.1878514587879181,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 97,
+      "base_pred": "maybe",
+      "base_confidence": 0.505098819732666,
+      "base_margin": 0.20871591567993164,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 177,
+      "base_pred": "yes",
+      "base_confidence": 0.5456537008285522,
+      "base_margin": 0.1686161458492279,
+      "reasoning_output": "answer: maybe",
+      "used_fallback": false,
+      "final_label": "maybe",
+      "gold_label": "yes"
+    },
+    {
+      "row_id": 185,
+      "base_pred": "no",
+      "base_confidence": 0.49597200751304626,
+      "base_margin": 0.22056561708450317,
+      "reasoning_output": "answer: yes",
+      "used_fallback": false,
+      "final_label": "yes",
+      "gold_label": "no"
+    }
+  ]
+}

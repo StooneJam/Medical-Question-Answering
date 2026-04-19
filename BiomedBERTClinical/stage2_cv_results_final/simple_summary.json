@@ -1,0 +1,239 @@
+{
+  "pipeline_name": "simple_supervised",
+  "fold_results": [
+    {
+      "run_name": "simple_fold_1",
+      "fold_id": 1,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_1/checkpoint-100",
+      "temperature": 1.4437026977539062,
+      "selection_metrics": {
+        "accuracy": 0.82,
+        "macro_f1": 0.7514830848164182,
+        "f1_no": 0.8571428571428571,
+        "f1_maybe": 0.5454545454545454,
+        "f1_yes": 0.8518518518518519
+      },
+      "final_metrics": {
+        "accuracy": 0.76,
+        "macro_f1": 0.6876152170269817,
+        "f1_no": 0.7777777777777778,
+        "f1_maybe": 0.46153846153846156,
+        "f1_yes": 0.8235294117647058
+      }
+    },
+    {
+      "run_name": "simple_fold_2",
+      "fold_id": 2,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_2/checkpoint-100",
+      "temperature": 1.611506700515747,
+      "selection_metrics": {
+        "accuracy": 0.74,
+        "macro_f1": 0.5912574016022293,
+        "f1_no": 0.7586206896551724,
+        "f1_maybe": 0.18181818181818182,
+        "f1_yes": 0.8333333333333334
+      },
+      "final_metrics": {
+        "accuracy": 0.76,
+        "macro_f1": 0.573025856044724,
+        "f1_no": 0.8888888888888888,
+        "f1_maybe": 0.0,
+        "f1_yes": 0.8301886792452831
+      }
+    },
+    {
+      "run_name": "simple_fold_3",
+      "fold_id": 3,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_3/checkpoint-175",
+      "temperature": 2.0095181465148926,
+      "selection_metrics": {
+        "accuracy": 0.72,
+        "macro_f1": 0.5829135718147928,
+        "f1_no": 0.7647058823529411,
+        "f1_maybe": 0.15384615384615385,
+        "f1_yes": 0.8301886792452831
+      },
+      "final_metrics": {
+        "accuracy": 0.68,
+        "macro_f1": 0.5465099530435283,
+        "f1_no": 0.6896551724137931,
+        "f1_maybe": 0.14285714285714285,
+        "f1_yes": 0.8070175438596491
+      }
+    },
+    {
+      "run_name": "simple_fold_4",
+      "fold_id": 4,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_4/checkpoint-50",
+      "temperature": 0.7603294849395752,
+      "selection_metrics": {
+        "accuracy": 0.72,
+        "macro_f1": 0.5904872070285604,
+        "f1_no": 0.8421052631578947,
+        "f1_maybe": 0.15384615384615385,
+        "f1_yes": 0.7755102040816326
+      },
+      "final_metrics": {
+        "accuracy": 0.66,
+        "macro_f1": 0.5339411059750043,
+        "f1_no": 0.6060606060606061,
+        "f1_maybe": 0.25,
+        "f1_yes": 0.7457627118644068
+      }
+    },
+    {
+      "run_name": "simple_fold_5",
+      "fold_id": 5,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_5/checkpoint-25",
+      "temperature": 0.9224795699119568,
+      "selection_metrics": {
+        "accuracy": 0.8,
+        "macro_f1": 0.7397147147147147,
+        "f1_no": 0.8108108108108109,
+        "f1_maybe": 0.5333333333333333,
+        "f1_yes": 0.875
+      },
+      "final_metrics": {
+        "accuracy": 0.66,
+        "macro_f1": 0.4864766081871345,
+        "f1_no": 0.6875,
+        "f1_maybe": 0.0,
+        "f1_yes": 0.7719298245614035
+      }
+    },
+    {
+      "run_name": "simple_fold_6",
+      "fold_id": 6,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_6/checkpoint-25",
+      "temperature": 0.6502535939216614,
+      "selection_metrics": {
+        "accuracy": 0.68,
+        "macro_f1": 0.5528735632183908,
+        "f1_no": 0.7333333333333333,
+        "f1_maybe": 0.16666666666666666,
+        "f1_yes": 0.7586206896551724
+      },
+      "final_metrics": {
+        "accuracy": 0.64,
+        "macro_f1": 0.5623456790123457,
+        "f1_no": 0.7333333333333333,
+        "f1_maybe": 0.25,
+        "f1_yes": 0.7037037037037037
+      }
+    },
+    {
+      "run_name": "simple_fold_7",
+      "fold_id": 7,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_7/checkpoint-100",
+      "temperature": 1.164174199104309,
+      "selection_metrics": {
+        "accuracy": 0.78,
+        "macro_f1": 0.688035602633418,
+        "f1_no": 0.7894736842105263,
+        "f1_maybe": 0.4444444444444444,
+        "f1_yes": 0.8301886792452831
+      },
+      "final_metrics": {
+        "accuracy": 0.76,
+        "macro_f1": 0.6852954144620811,
+        "f1_no": 0.8125,
+        "f1_maybe": 0.42857142857142855,
+        "f1_yes": 0.8148148148148148
+      }
+    },
+    {
+      "run_name": "simple_fold_8",
+      "fold_id": 8,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_8/checkpoint-100",
+      "temperature": 1.5679843425750732,
+      "selection_metrics": {
+        "accuracy": 0.74,
+        "macro_f1": 0.5965948796137476,
+        "f1_no": 0.7777777777777778,
+        "f1_maybe": 0.18181818181818182,
+        "f1_yes": 0.8301886792452831
+      },
+      "final_metrics": {
+        "accuracy": 0.74,
+        "macro_f1": 0.5985838779956426,
+        "f1_no": 0.75,
+        "f1_maybe": 0.2222222222222222,
+        "f1_yes": 0.8235294117647058
+      }
+    },
+    {
+      "run_name": "simple_fold_9",
+      "fold_id": 9,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_9/checkpoint-75",
+      "temperature": 1.189414620399475,
+      "selection_metrics": {
+        "accuracy": 0.74,
+        "macro_f1": 0.6836007130124777,
+        "f1_no": 0.7272727272727273,
+        "f1_maybe": 0.5,
+        "f1_yes": 0.8235294117647058
+      },
+      "final_metrics": {
+        "accuracy": 0.72,
+        "macro_f1": 0.5793650793650794,
+        "f1_no": 0.75,
+        "f1_maybe": 0.16666666666666666,
+        "f1_yes": 0.8214285714285714
+      }
+    },
+    {
+      "run_name": "simple_fold_10",
+      "fold_id": 10,
+      "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_10/checkpoint-100",
+      "temperature": 1.669540524482727,
+      "selection_metrics": {
+        "accuracy": 0.7,
+        "macro_f1": 0.49583333333333335,
+        "f1_no": 0.6875,
+        "f1_maybe": 0.0,
+        "f1_yes": 0.8
+      },
+      "final_metrics": {
+        "accuracy": 0.7,
+        "macro_f1": 0.5023112480739599,
+        "f1_no": 0.7272727272727273,
+        "f1_maybe": 0.0,
+        "f1_yes": 0.7796610169491526
+      }
+    }
+  ],
+  "mean_outer_metrics": {
+    "accuracy": 0.708,
+    "f1_maybe": 0.1921855921855922,
+    "f1_no": 0.7422988505747127,
+    "f1_yes": 0.7921565689956396,
+    "macro_f1": 0.5755470039186481
+  },
+  "std_outer_metrics": {
+    "accuracy": 0.044,
+    "f1_maybe": 0.1580844266593785,
+    "f1_no": 0.07241236456421124,
+    "f1_yes": 0.039430452837916484,
+    "macro_f1": 0.06418809612106835
+  },
+  "best_fold": {
+    "run_name": "simple_fold_1",
+    "fold_id": 1,
+    "best_checkpoint": "./stage2_cv_results_final/runs/simple_fold_1/checkpoint-100",
+    "temperature": 1.4437026977539062,
+    "selection_metrics": {
+      "accuracy": 0.82,
+      "macro_f1": 0.7514830848164182,
+      "f1_no": 0.8571428571428571,
+      "f1_maybe": 0.5454545454545454,
+      "f1_yes": 0.8518518518518519
+    },
+    "final_metrics": {
+      "accuracy": 0.76,
+      "macro_f1": 0.6876152170269817,
+      "f1_no": 0.7777777777777778,
+      "f1_maybe": 0.46153846153846156,
+      "f1_yes": 0.8235294117647058
+    }
+  }
+}
