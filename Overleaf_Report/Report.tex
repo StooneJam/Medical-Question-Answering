@@ -36,6 +36,7 @@
 \usepackage{tabularx} % column width
 \usepackage{makecell} % cell size
 \usepackage{indentfirst} % indent paragraphs
+\usepackage{longtable} % for multi-column cells in tables
 
 \graphicspath{ {./images/} }
 
@@ -74,7 +75,7 @@ Yes \\
 \label{figure:1}
 \end{figure}
 
-However, biomedical data can provide significant challenges. The language in research papers often contains complex terminology, domain-specific phrases and abbreviations which can be difficult for models to interpret. Additionally, abstracts are usually dense and information-rich, requiring models to identify and extract relevant details from long passages of text. This is highlighted by Figure \ref{figure:subim1} which demonstrates an average context length of 1350 words and some contexts exceeding 2500 words. Many questions also require inferential reasoning rather than simple keyword matching, further increasing difficulty. Our dataset demonstrates a significant label imbalance with 55.2\% of instances belonging in the ‘yes’ class, 33.8\% in the ‘no’ class and only 11\% in the ‘maybe’ class (Figure \ref{figure:subim3}). This distribution indicates that accuracy alone will be an insufficient metric and inspecting macro-average F1 will be required to better understand model performance. These challenges highlight the importance of selecting appropriate text representations and architecture in order to achieve high accuracy and reliability. \par
+However, biomedical data can provide significant challenges. The language in research papers often contains complex terminology, domain-specific phrases and abbreviations which can be difficult for models to interpret. Additionally, abstracts are usually dense and information-rich, requiring models to identify and extract relevant details from long passages of text. This is highlighted by Figure \ref{figure:subim1} which demonstrates an average input length of 1450 words and some inputs exceeding 2500 words. Many questions also require inferential reasoning rather than simple keyword matching, further increasing difficulty. Our dataset demonstrates a significant label imbalance with 55.2\% of instances belonging in the ‘yes’ class, 33.8\% in the ‘no’ class and only 11\% in the ‘maybe’ class (Figure \ref{figure:subim3}). This distribution indicates that accuracy alone will be an insufficient metric and inspecting macro-average F1 will be required to better understand model performance. These challenges highlight the importance of selecting appropriate text representations and architecture in order to achieve high accuracy and reliability. \par
 
 % EDA Figure
 \begin{figure}[h]
@@ -82,7 +83,7 @@ However, biomedical data can provide significant challenges. The language in res
 % Question + Context length distribution
 \begin{subfigure}{0.9\columnwidth}
 \centering
-\caption{Context Length Distribution}
+\caption{Combined Question and Context Length Distribution}
 \includegraphics[width=0.9\linewidth, height=5cm]{question_context_hist} 
 \label{figure:subim1}
 \end{subfigure}
@@ -148,11 +149,11 @@ In order to evaluate performance and answer quality we systematically experiment
 \hline
 \textbf{Exp 1} & \makecell{BiomedBERT} & \makecell{Logistic\\Regression} \\
 \hline
-\textbf{Exp 2} & \makecell{BioClinical\\ModernBERT} & \makecell{Logistic\\Regression} \\
+\textbf{Exp 2} & \multicolumn{2}{| c |}{\makecell{BioClinical ModernBERT}}\\
 \hline
-\textbf{Exp 3} & \makecell{Raw text} & \makecell{BioGPT} \\
+\textbf{Exp 3} & \multicolumn{2}{| c |}{\makecell{Biomed-R1-8B}}\\
 \hline
-\textbf{Exp 4} & \makecell{Raw text} & \makecell{BioMed-R1-8B} \\
+\textbf{Exp 4} & \multicolumn{2}{| c |}{\makecell{BioGPT}}\\
 \hline
 \end{tabularx}
 \caption{Experimental Pairings}
