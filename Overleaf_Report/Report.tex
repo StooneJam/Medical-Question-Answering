@@ -105,7 +105,7 @@ A good solution will be able to accurately interpret both the question and conte
 \section{Methods}
 
 \subsection{Baseline System}
-The baseline system (Figure \ref{figure:3}) follows a pipeline of six stages. The input, consisting of a question paired with a corresponding abstract, undergoes preprocessing which is handled implicitly by the vectorization step. The preprocessing is handled by the vectorization stage which transforms the text using schikit-learn’s TfidfVectorizer. This is configured with English stop word removal and bi-gram feature extraction which results in tokens that are lowercased, split into unigrams and bigrams and filtered using English stop-words capturing both individual terms and short phrase patterns. This is particularly important in biomedical question answering, where discriminative features often appear in multi-word expressions. The TF-IDF representation assigns weight to terms based on their frequency within a document and their rarity across the corpus. The weight of a term (t) in the document (d) is computed as: 
+The baseline system (Figure \ref{figure:3}) follows a pipeline of six stages. The input, consisting of a question paired with a corresponding abstract, undergoes preprocessing which is handled implicitly by the vectorization step. The preprocessing is handled by the vectorization stage which transforms the text using scikit-learn’s TfidfVectorizer. This is configured with English stop word removal and bi-gram feature extraction which results in tokens that are lowercased, split into unigrams and bigrams and filtered using English stop-words capturing both individual terms and short phrase patterns. This is particularly important in biomedical question answering, where discriminative features often appear in multi-word expressions. The TF-IDF representation assigns weight to terms based on their frequency within a document and their rarity across the corpus. The weight of a term (t) in the document (d) is computed as: 
 \[TF–IDF(t, d) = tf(t, d) · log(N / df(t))\]
 Where tf( t, d) is the term frequency of t in the document, N is the total number of documents, and df(t) is the number of documents containing t. This yields a high-dimensional sparse vector representation for each input, emphasising discriminate terms while down-weighting common language terms. For prediction, feature vectors representing question-answer pairs are passed into a logistic regression classifier which uses regularised cross-entropy loss. The model estimates the probability of a correct answer using:
 \[P(y = c | x) = softmax(Wx + b)\]
@@ -119,31 +119,33 @@ The model produces a weight vector that maps sparse TF-IDF features to class pro
 \end{figure}
 
 \subsection{Axes of Experimentation}
-In order to evaluate performance and answer quality we systematically experiment with variations in text representation and AI method. We compare sparse text representations with denser embeddings and compare classification methods to answer generation. These two components are most influential in overall system performance and improvements in these components is expected to provide significant performance gains. Text representation determines how effectively meaningful information is captured from the input. Models must reason over long, information-dense contexts which will be particularly challenging for sparse representations. The baseline system using TF-IDF text representation is expected to perform adequately on straightforward instances but will struggle with complex questions and abstracts. TF-IDF representations are not able to capture word order and context which limits their ability to capture nuanced meanings and semantic relationships between words. \par
-The second key component of our QA pipeline is the AI method. This dictates how information from the text representation is used to make accurate predictions. The baseline system uses a logistic regression classifier which is chosen for its simplicity, interpretability and effectiveness on high-dimensional sparse data. While it provides a strong and efficient baseline, its performance is limited by its linear nature. This restricts its ability to capture complex patterns and interactions within the data. \par
+In order to evaluate performance and answer quality we systematically experiment with variations in text representation and AI method, comparing sparse text representations with denser embeddings and classification methods to answer generation respectively. These two components are most influential in overall system performance and improvements in these components is expected to provide significant performance gains. Text representation determines how effectively meaningful information is captured from the input. Models must reason over long, information-dense contexts which will be particularly challenging for sparse representations. The baseline system using TF-IDF text representation is expected to perform adequately on straightforward instances but will struggle with complex questions and abstracts. TF-IDF representations are not able to capture word order and context which limits their ability to capture nuanced meanings and semantic relationships between words. \par
+The second key component of our QA pipeline is the AI method. This dictates how information from the text representation is used to make accurate predictions. The baseline system uses a logistic regression classifier which was chosen for its simplicity, interpretability and effectiveness on high-dimensional sparse data. While it provides a strong and efficient baseline, its performance is limited by its linear nature. This restricts its ability to capture complex patterns and interactions within the data. \par
 In order to improve on the limitations of our baseline system we test improvements across the text representation and model axes. The two components are interdependent, as different AI methods require different forms of input data so modifying the model necessitates corresponding changes in the input text representation. We therefore evaluate a set of representative pairings that align with the requirements of each method (Table \ref{table:1}). \par
 
-% Table of Pairings
 \begin{table}[htbp]
-\small
 \centering
-\renewcommand{\arraystretch}{1.5}
-\begin{tabularx}{\columnwidth}{|l|X|X|}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.1}
+
+\begin{tabularx}{\columnwidth}{|l|X|X|X|}
 \hline
-& \makecell{\textbf{Text}\\\textbf{Representation}} & \makecell{\textbf{Model}}\\
+\textbf{} & \textbf{Text Representations} & \textbf{Prediction Method} & \textbf{Model} \\
 \hline
-\textbf{Baseline} & \makecell{TF-IDF} & \makecell{Logistic\\Regression} \\
+\textbf{Baseline} & TF-IDF & Linear classification & Logistic Regression \\
 \hline
-\textbf{Exp 1} & \makecell{BiomedBERT} & \makecell{Logistic\\Regression} \\
+\textbf{Exp 1} & BiomedBERT embeddings & Linear classification & Logistic Regression \\
 \hline
-\textbf{Exp 2} & \multicolumn{2}{| c |}{\makecell{BioClinical ModernBERT}}\\
+\textbf{Exp 2} & Contextual transformer representationa & End-to-end classification & BioClinical ModernBERT \\
 \hline
-\textbf{Exp 3} & \multicolumn{2}{| c |}{\makecell{Biomed-R1-8B}}\\
+\textbf{Exp 3} & Generative biomedical representationa & Answer generation & BioGPT \\
 \hline
-\textbf{Exp 4} & \multicolumn{2}{| c |}{\makecell{BioGPT}}\\
+\textbf{Exp 4} & Generative biomedical representationa & Answer generation (Reasoning model) & Biomed-R1-8B \\
 \hline
 \end{tabularx}
-\caption{Experimental Pairings}
+
+\caption{Experimental pairings across text representation, prediction method, and model.}
 \label{table:1}
 \end{table}
 
@@ -173,9 +175,11 @@ Text representation a key component of the pipeline as it determines how linguis
 We compare our baseline system using sparse text representation to BERT-based contextual embeddings. Contextual embeddings generated by pretrained biomedical language models BiomedBERT and BioClinical ModernBERT are able to encapsulate context-dependant meanings and are therefore expected to perform better. Multi-phase fine-tuning of BioBERT with long-answer bag-of-word statistics as additional supervision has previously achieved 68.1\% accuracy \cite{jin_pubmedqa_2019}. However this is significantly lower than single-human performance of 78\% accuracy (Figure \ref{table:1}) demonstrating a need for improvement. We select BiomedBERT which is pretrained from scratch using domain-specific biomedical corpora and outperforms continuous pre-training of general models in biomedical NLP tasks. \cite{gu_domain-specific_2021} shows a fully fine-tuned BiomedBERT applied to PubmedQA dataset achieving 55.84\% accuracy. This gives us a performance reference point for our improved frozen encoder + linear classifier strategy. \par
 
 \subsubsection{Improvement 2: BioClinical ModernBERT}
-Our next proposed improvement uses a fully neural approach using BioClinical ModernBERT with a sequence-classification head. This model performs text representation and classification jointly with a single end-to-end architecture. The input sequence is processed by the transformer encoder to produce contextualised token embeddings, capturing semantic relationships and domain-specific language usage. Multiple transformer layers, where each token attends to every other token via self-attention allows the model to capture long-range dependencies that cannot be represented through simple lexical overlap or fixed n-gram features. The final representation of the sequence ([CLS] token) is passed to the classification head consisting of a fully connected layer followed by a SoftMax function, which outputs probabilities over the target classes. The prediction is represented by: 
-\[P(y = c | x) = SoftMax(W · h_{cls} + b) \]
-Where \(h_{cls}\) is the contextual embedding generated by the transformer, and W, and b are the parameters of the classification head. The transformer layers therefore act as a deep feature extractor while the classification head performs the final prediction, allowing the entire system to be optimised together via backpropagation. As a result the system is expected to demonstrate improved performance particularly in cases where correct answer prediction depends on complex relationships, paraphrases or specialised biomedical language \cite{gu_domain-specific_2021, warner_smarter_2025}. \par
+Our next proposed improvement builds directly on Improvement 1. Whereas Improvement 1 uses dense biomedical contextual embeddings from a pretrained encoder with a separate linear logistic-regression classifier, this improvement keeps the move away from sparse lexical features but tests whether further gains can be achieved through \textbf{end-to-end classification}. We therefore use \textbf{BioClinical ModernBERT} with a sequence-classification head, so that text representation and prediction are learned jointly within a single neural architecture. The paired question-context input is processed by the transformer encoder to produce contextualised token embeddings that capture semantic relationships, long-range dependencies, and specialised biomedical language usage more flexibly than fixed embeddings passed to a linear classifier. The final sequence representation (\texttt{[CLS]}) is passed to a fully connected classification layer followed by a SoftMax function, which outputs probabilities over the target classes:
+\[
+P(y = c \mid x) = \text{SoftMax}(W h_{cls} + b)
+\]
+where \(h_{cls}\) is the contextual sequence representation and \(W\) and \(b\) are the classification-head parameters. This allows the model to learn both the representation and the decision boundary together via backpropagation, rather than relying on a frozen embedding space with a linear separator. We therefore expect this model to perform better on examples where correct prediction depends on subtle biomedical phrasing, paraphrase, or complex interactions between the question and abstract \cite{gu_domain-specific_2021, warner_smarter_2025}. \par
 
 \subsubsection{Improvement 3: BioGPT}
 Our final proposed improvement is BioGPT. BioGPT is a domain-specific generative Transformer model pre-trained on large-scale biomedical literature, designed to both understand and generate medically relevant natural language. Architecturally, it follows a decoder-only Transformer structure, similar to GPT-style models, enabling it to model text in an autoregressive manner. Due to its specialised pre-training on biomedical corpora, BioGPT is particularly effective at capturing domain specific terminology, relationships, and contextual nuances that are often missed by general language models. \par
