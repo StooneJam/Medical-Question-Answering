@@ -3,6 +3,7 @@
 
 Table~\ref{tab:bcb_appendix_stage1} records the key preprocessing and Stage~1 optimisation settings that supported the main BioClinical ModernBERT pipeline. Table~\ref{tab:bcb_appendix_stage2} records the detailed Stage~2 semi-supervised settings used for pseudo-label selection, student training, and the optional reasoning fallback. Table~\ref{tab:bcb_result_diagnostics} summarises the most important supporting diagnostics behind the final comparison, and Table~\ref{tab:bcb_final_confusion} gives the final official test confusion matrix for the selected calibrated committee.
 
+\FloatBarrier
 \begin{table}[htbp]
 \centering
 \footnotesize
@@ -56,7 +57,9 @@ Weak-stage exported output & encoder only \\
 \caption{Supporting preprocessing and Stage~1 settings for BioClinical ModernBERT.}
 \label{tab:bcb_appendix_stage1}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[htbp]
 \centering
 \footnotesize
@@ -130,7 +133,9 @@ Fallback if parse fails & original committee prediction \\
 \caption{Supporting Stage~2 semi-supervised and post-selection settings for BioClinical ModernBERT.}
 \label{tab:bcb_appendix_stage2}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[htbp]
 \centering
 \footnotesize
@@ -180,13 +185,13 @@ Yes & 25 & 28 & 223 \\
 \caption{Final test confusion matrix for the Pipeline S calibrated committee. Rows are true labels and columns are predicted labels.}
 \label{tab:bcb_final_confusion}
 \end{table}
-
+\FloatBarrier
 
 \subsection{BioClinical ModernBERT training schematics}
 \label{app:bcb_schematics}
-
 Figures~\ref{fig:app_stage1_bcb} and~\ref{fig:app_stage2_bcb} summarise the final BioClinical ModernBERT training design. The Stage~1 schematic shows the route-selection process: masked adaptation on unlabelled data was tested but rejected, and the stronger base classifier route was then warm-started on the PQA-A weak-label set. The Stage~2 schematic shows the standardised 500/500 expert split, the outer 10-fold cross-validation protocol, the comparison between the simple supervised and advanced semi-supervised pipelines, and the final calibrated committee evaluation on the untouched test set.
 
+\FloatBarrier
 \begin{figure}[H]
     \centering
     \begin{subfigure}[t]{0.47\linewidth}
@@ -205,3 +210,4 @@ Figures~\ref{fig:app_stage1_bcb} and~\ref{fig:app_stage2_bcb} summarise the fina
     \caption{BioClinical ModernBERT training schematics.}
     \label{fig:app_bcb_schematics}
 \end{figure}
+\FloatBarrier
