@@ -133,9 +133,27 @@ Fallback if parse fails & original committee prediction \\
 \caption{Supporting Stage~2 semi-supervised and post-selection settings for BioClinical ModernBERT.}
 \label{tab:bcb_appendix_stage2}
 \end{table}
-\FloatBarrier
 
-\FloatBarrier
+
+\begin{table}[H]
+\centering
+\caption{Upstream route-selection summary for Experiment 2. The masked-adaptation route was rejected because it did not improve downstream three-class QA. The binary weak-label stage uses only \textit{yes}/\textit{no}, so \textit{maybe} is not applicable there.}
+\label{tab:bcb_route_summary}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}
+\hline
+\textbf{Stage / system} & \textbf{Accuracy} & \textbf{Macro F1} & \textbf{F1 No} & \textbf{F1 Maybe} & \textbf{F1 Yes} \\
+\hline
+Supervised base route (3-seed mean) & 0.493 & 0.476 & 0.366 & 0.492 & 0.568 \\
+MLM-adapted route (pilot downstream check) & 0.480 & 0.453 & 0.333 & 0.444 & 0.582 \\
+Full weak PQA-A warm-start (binary) & 0.981 & 0.922 & 0.854 & -- & 0.990 \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+
 \begin{table}[htbp]
 \centering
 \footnotesize
