@@ -180,3 +180,28 @@ Yes & 25 & 28 & 223 \\
 \caption{Final test confusion matrix for the Pipeline S calibrated committee. Rows are true labels and columns are predicted labels.}
 \label{tab:bcb_final_confusion}
 \end{table}
+
+
+\subsection{BioClinical ModernBERT training schematics}
+\label{app:bcb_schematics}
+
+Figures~\ref{fig:app_stage1_bcb} and~\ref{fig:app_stage2_bcb} summarise the final BioClinical ModernBERT training design. The Stage~1 schematic shows the route-selection process: masked adaptation on unlabelled data was tested but rejected, and the stronger base classifier route was then warm-started on the PQA-A weak-label set. The Stage~2 schematic shows the standardised 500/500 expert split, the outer 10-fold cross-validation protocol, the comparison between the simple supervised and advanced semi-supervised pipelines, and the final calibrated committee evaluation on the untouched test set.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.47\linewidth}
+        \centering
+        \includegraphics[width=\linewidth,height=0.82\textheight,keepaspectratio]{images/Stage1_AI.png}
+        \caption{Stage~1 route selection and weak warm-start.}
+        \label{fig:app_stage1_bcb}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.47\linewidth}
+        \centering
+        \includegraphics[width=\linewidth,height=0.82\textheight,keepaspectratio]{images/Stage2_AI.png}
+        \caption{Stage~2 standardised 500/500 evaluation protocol.}
+        \label{fig:app_stage2_bcb}
+    \end{subfigure}
+    \caption{BioClinical ModernBERT training schematics.}
+    \label{fig:app_bcb_schematics}
+\end{figure}
